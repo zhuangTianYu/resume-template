@@ -111,6 +111,54 @@
       font-size: 18px;
       line-height: 1.6;
     }
+    .section.project .item {
+      padding: 0 10px 0 20px;
+      margin-bottom: 12px;
+    }
+    .section.project .item:last-child {
+      margin-bottom: 0;
+    }
+    .section.project .project-introduction {
+      margin-bottom: 10px;
+    }
+    .section.project .project-name {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 19px;
+      font-weight: bold;
+    }
+    .section.project .period {
+      float: right;
+      font-size: 17px;
+    }
+    .section.project .project-detail-item {
+      padding-left: 10px;
+      font-size: 0;
+      margin-bottom: 6px;
+    }
+    .section.project .label,
+    .section.project .value {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .section.project .label {
+      width: 90px;
+    }
+    .section.project .value {
+      padding-left: 90px;
+      margin-left: -90px;
+      width: 100%;
+    }
+    .section.evaluate .content {
+      padding: 0 20px 0 20px;
+    }
+    .section.evaluate p {
+      font-size: 18px;
+      line-height: 1.6;
+      text-indent: 1em;
+    }
   </style>
 </head>
 <body>
@@ -141,7 +189,7 @@
         </div>
         <div class="item">
           <div class="label">何时上岗</div>
-          <div class="value">2周内</div>
+          <div class="value">1个月内</div>
         </div>
         <div class="item">
           <div class="label">学校</div>
@@ -237,6 +285,7 @@
           </div>
           <p>为明教育集团致力于中国民办基础教育，在国内国际上创办了多所为明学校。</p>
           <p>本人任职于学信研发部，负责限时练产品线的功能迭代开发。</p>
+          <p>在职期间完成了限时练项目v1至v2版本升级、基础信息项目的设计与开发。</p>
         </div>
         <div class="item">
           <div class="company-post-period">
@@ -246,6 +295,7 @@
           </div>
           <p>空间家有限公司主营 在线选址、行政超人 两大业务模块。</p>
           <p>本人任职于行政超人事业部，负责行政超人产品线的功能迭代开发。</p>
+          <p>在职期间完成了多款面向不同需求的电商项目开发。</p>
         </div>
         <div class="item">
           <div class="company-post-period">
@@ -261,11 +311,87 @@
     <div class="section project">
       <div class="title">近期项目</div>
       <div class="content">
+        <div class="item">
+          <div class="project-introduction">
+            <div class="project-name">1.基础信息平台</div>
+            <div class="period">2018-12 至 2019-04</div>
+          </div>
+          <div class="project-detail">
+            <div class="project-detail-item">
+              <div class="label">项目简介：</div>
+              <div class="value">
+                <p>基础信息项目是一款面向学信管理员、学校与机构、教师与学生的项目。</p>
+                <p>项目整体拆分为学信系统、机构、学校三个子项目，不同项目之间相互配合。</p>
+                <p>为不同的角色提供了各自的线上平台，保障教学工作的各个环节有序地进行。</p>
+              </div>
+            </div>
+            <div class="project-detail-item">
+              <div class="label">技术要点：</div>
+              <div class="value">
+                <p>基础信息项目实现了ui层、数据层、业务层的项目抽离，具体体现如下：</p>
+                <p>组件层：使用 typescript 封装基于 iviewui 的基础组件，如 button，dialog 等。</p>
+                <p>工具层：使用 typescript 开发项目通用函数，如 timestampToString 方法等。</p>
+                <p>数据层：根据不同业务模块设计不同的 vuex 逻辑，暴露 mutation，action 等。</p>
+                <p>业务层：根据参数返回对应的基于数据层调用结果渲染好的组件层模板与交互事件。</p>
+                <p>项目层：将上述层通过 node_modules 依赖的形式引入并加载，最终呈现完整的项目。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="project-introduction">
+            <div class="project-name">2.学业评价系统</div>
+            <div class="period">2018-08 至 2018-12</div>
+          </div>
+          <div class="project-detail">
+            <div class="project-detail-item">
+              <div class="label">项目简介：</div>
+              <div class="value">
+                <p>学业评价是一款面向教师教学、学生学习情况的数据类项目。</p>
+                <p>项目整体从考试、班级、知识点等多个维度展开丰富的统计分析、报表展示。</p>
+              </div>
+            </div>
+            <div class="project-detail-item">
+              <div class="label">个人职责：</div>
+              <div class="value">
+                <p>基于 echarts 工具库、ui 设计图，封装符合项目视觉风格的图表组件。</p>
+                <p>基于 iviewui 框架，封装符合项目视觉风格、界面交互习惯的基础 ui 组件。</p>
+                <p>设计 vuex 模块，包括各模块数据的存储结构、存储逻辑等。</p>
+                <p>具体的页面开发、组件调用、api 接口调用、整体交互风格优化等内容。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="project-introduction">
+            <div class="project-name">3.限时练平台</div>
+            <div class="period">2018-04 至 2018-08</div>
+          </div>
+          <div class="project-detail">
+            <div class="project-detail-item">
+              <div class="label">项目简介：</div>
+              <div class="value">
+                <p>限时练是一款面向教师与学生，实现考试全流程的项目。</p>
+                <p>项目包含在线组卷、制作答题卡、发布考试、生成个性化提分方案等流程。</p>
+              </div>
+            </div>
+            <div class="project-detail-item">
+              <div class="label">个人职责：</div>
+              <div class="value">
+                <p>基于 elementui 框架，封装符合项目视觉风格、界面交互习惯的基础 ui 组件。</p>
+                <p>基于菁优网返回的试题数据，升级公用组件库中的试题组件相关功能与样式优化。</p>
+                <p>设计开发试题、试卷、公用查询条件等 vuex 模块的存储逻辑、api 接口调用。</p>
+                <p>设计开发在线预览试卷功能，包括试卷信息编辑、试题状态操作、试卷整体预览等功能。</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="section evaluate">
       <div class="title">自我评价</div>
       <div class="content">
+        <p>我是一名乐于实现需求、善于与同事沟通的开发人员。在保证研发进度的前提下，倾向于交付稳定、可靠、可读性高的代码。同时对服务端的技术也有着浓厚的兴趣，希望在工作中丰富、提升自己技术的深度与广度，为团队创造更多的价值。</p>
       </div>
     </div>
   </div>
